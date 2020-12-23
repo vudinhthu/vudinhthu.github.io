@@ -69,14 +69,14 @@ body {
 	z-index: 2;
 	background-size: 100vh;
 	background-size: cover;
-	background-image: url(https://livewallpaperhd.com/wp-content/uploads/2017/07/Dark-Elegant-Wallpaper.jpg);
+	background-image: url(../images/card-front-side.jpg);
 }
 .back {
 	background-color: #333;
 	transform: rotateY(180deg);
 	z-index: 0;
 	padding-top: 10px;
-	background-image: url(https://userscontent2.emaze.com/images/f9538183-0ff9-478f-b964-c8ab90421e3b/3d28e192fda5c17250f96a2779c84475.jpg);
+	background-image: url(../images/card-back-side.jpg);
 }
 .container:hover {
 	-webkit-transform: rotateY(180deg);
@@ -114,21 +114,6 @@ form input[type="submit"] {
 	color: #fff;
 	cursor: pointer;
 }
-/* my button style  */
-.white-mode {
-	text-decoration: none;
-	padding: 7px 10px;
-	background-color: #122;
-	border-radius: 3px;
-	color: #fff;
-	transition: 0.35s ease-in-out;
-	position: fixed;
-	left: 15px;
-	bottom: 15px;
-	font-family: "Montserrat";
-}
-
-.white-mode:hover {
-	background-color: #fff;
-	color: #122;
+.copyright {
+	display: none;
 }
