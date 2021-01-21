@@ -12,11 +12,11 @@
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
                 showValidate(input[i]);
-                check=false;
+                return false;
             }
         }
 
-        return check;
+        window.open('mailto:contact@vudinhthu.com');
     });
 
 
@@ -51,8 +51,6 @@
         $(thisAlert).removeClass('alert-validate');
     }
 
-    
-    
     /*==================================================================
     [ Simple slide100 ]*/
 

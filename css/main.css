@@ -1,29 +1,34 @@
-/*------------------------------------------------------------------
-Project:  ComingSoon
-Version:  
-Last change:  
-Assigned to:  Bach Le
-Primary use:  
--------------------------------------------------------------------*/
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
 @font-face {
   font-family: PlayfairDisplay-BlackItalic;
-  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf'); 
+  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf');
+}
+
+@font-face {
+  font-family: PlayfairDisplay-Bold;
+  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-BlackItalic.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Light;
+  src: url('../fonts/Poppins/Poppins-Light.ttf');
 }
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../fonts/Poppins/Poppins-Regular.ttf'); 
+  src: url('../fonts/Poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../fonts/Poppins/Poppins-Medium.ttf'); 
+  src: url('../fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/Poppins/Poppins-Bold.ttf');
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -50,25 +55,27 @@ Primary use:
 
 /*---------------------------------------------*/
 .input100 {
+  border: 1px solid #fff;
+  border-radius: 40px;
   display: block;
   width: 100%;
   height: 100%;
   padding: 0 90px 0 35px;
   background-color: #fff;
-
-  box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1);
-  -o-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1);
-  -ms-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
+            -10px -10px 20px #fff,
+            inset -5px -5px 15px rgba(96,125, 139, 0.05),
+            inset 5px 5px 15px rgba(0,0, 0, .1);
+  transition: all 0.5s ease-in-out;
 }
-
+.input100::-webkit-input-placeholder {
+  transition: all 0.5s ease-in-out;
+}
 .input100:focus {
-  box-shadow: 0 10px 15px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.2);
-  -o-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.2);
-  -ms-box-shadow: 0 10px 15px 0px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1),
+            -10px -10px 20px #fff,
+            inset -1px -1px 5px rgba(96,125, 139, 0.05),
+            inset 1px 1px 5px rgba(0,0, 0, .05);
 }
 
 
@@ -198,10 +205,11 @@ Primary use:
 
 /*---------------------------------------------*/
 .m2-txt1 {
-  font-family: Poppins-Regular;
-  font-size: 24px;
-  color: #999;
+  font-family: Poppins-Light;
+  font-size: 16px;
+  color: #888;
   line-height: 1.2;
+  letter-spacing: 1PX;
 }
 
 
@@ -211,6 +219,12 @@ Primary use:
 .l1-txt1 {
   font-family: PlayfairDisplay-BlackItalic;
   font-size: 90px;
+  color: #333;
+  line-height: 1.1;
+}
+.l1-h1 {
+  font-family: PlayfairDisplay-Bold;
+  font-size: 40px;
   color: #333;
   line-height: 1.1;
 }
@@ -254,7 +268,7 @@ Primary use:
 
 /*//////////////////////////////////////////////////////////////////
 [ Background ]*/
-.bg0 {background-color: #fff;}
+.bg0 {background-color: #f7f9fa;}
 
 .bg-img1 {
   background-position: center;
@@ -269,24 +283,13 @@ Primary use:
 [ Border ]*/
 
 
-
-
-
 /*==================================================================
-   WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE WHERE  
+ PLACEHODER
 ==================================================================*/
-
-
-
-
-/*==================================================================
- HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW HOW 
-==================================================================*/
-.placeholder0::-webkit-input-placeholder { color: #999999;}
-.placeholder0:-moz-placeholder { color: #999999;}
-.placeholder0::-moz-placeholder { color: #999999;}
-.placeholder0:-ms-input-placeholder { color: #999999;}
-
+.placeholder0::-webkit-input-placeholder { color: #999; font-size: 14px;}
+.placeholder0:-moz-placeholder { color: #999; font-size: 14px;}
+.placeholder0::-moz-placeholder { color: #999; font-size: 14px;}
+.placeholder0:-ms-input-placeholder { color: #999; font-size: 14px;}
 
 /*---------------------------------------------*/
 .overlay1 {
@@ -335,8 +338,10 @@ Primary use:
 }
 
 .how-social:hover {
-  background-color: #333;
   color: #fff;
+}
+.how-social.fb:hover {
+  background-color: #4267B2;
 }
 
 
@@ -345,10 +350,10 @@ Primary use:
 
 /*------------------------------------------------------------------
 [ Focus ]*/
-.focus-in0:focus::-webkit-input-placeholder { color:transparent; }
-.focus-in0:focus:-moz-placeholder { color:transparent; }
-.focus-in0:focus::-moz-placeholder { color:transparent; }
-.focus-in0:focus:-ms-input-placeholder { color:transparent; }
+.focus-in0:focus::-webkit-input-placeholder { color:#eee; }
+.focus-in0:focus:-moz-placeholder { color:#eee; }
+.focus-in0:focus::-moz-placeholder { color:#eee; }
+.focus-in0:focus:-ms-input-placeholder { color: #eee; }
 
 
 /*------------------------------------------------------------------
@@ -500,7 +505,6 @@ Primary use:
     font-size: 60px;
   }
 
-  
 }
 
 
