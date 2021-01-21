@@ -1,0 +1,52 @@
+:root {
+    --background-color: #3742fa;
+    --blue: #3742fa;
+    --red: #ff4757;
+    --yellow: #eccc68;
+    --green: #2ed573;
+    --gray: #f1f2f6;
+    --black: #2f3542;
+    --white: #fff
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+body {
+    background-color: var(--background-color);
+}
+.wrap {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0 20px;
+}
+.logo {
+    text-align: center;
+}
+.nav {
+    position: relative;
+    width: auto;
+    margin: 0 -20px;
+}
+.nav__menu {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0;
+    margin: 0;
+}
+.nav__menu__item {
+    scroll-snap-align: start;
+    display: block;
+    width: 300px;
+    padding: 5px 10px;
+    background: #3742fa;
+    filter: hue-rotate(var(--d));
+}
