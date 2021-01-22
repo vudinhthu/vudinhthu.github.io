@@ -34,8 +34,7 @@ body {
 .logo {
     text-align: center;
 }
-.nav__menu {
-    display: flex;
+.nav {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 0 10px;
@@ -43,6 +42,9 @@ body {
     box-sizing: content-box;
     position: relative;
     scroll-padding-left: 5px;
+}
+.nav__menu {
+    display: flex;
 }
 .nav__menu__item {
     color: #fff;
