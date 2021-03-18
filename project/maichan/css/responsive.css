@@ -1,0 +1,29 @@
+/*----------------------------------
+    SMARTPHONE
+----------------------------------*/
+@media screen and (max-width: 769px) {
+}
+
+/*----------------------------------
+    TABLET
+----------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 769px) {
+}
+
+/*----------------------------------
+    TABLET PRO SMALL
+----------------------------------*/
+@media screen and (min-width: 769px) and (max-width: 834px) {
+}
+
+/*----------------------------------
+    TABLET PRO
+----------------------------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+/*----------------------------------
+    PC ONLY
+----------------------------------*/
+@media screen and (min-width: 769px) {
+}
