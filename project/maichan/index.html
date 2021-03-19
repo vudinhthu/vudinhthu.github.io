@@ -22,17 +22,17 @@
         <link rel="apple-touch-icon" href="favicon.png">
     </head>
     <body class="front-page">
-        <header id="header" class="sticky">
+        <header id="header" class="top-page">
             <div id="navigation" class="navigation">
                 <div id="logo" class="logo">
                     <img src="./images/logo.png" alt="Tokoyaki Maichan">
                 </div>
                 <nav id="main-menu" class="nav">
                     <ul class="nav-menu">
-                        <li>Menu</li>
-                        <li>Tin tức</li>
-                        <li>Về chúng tôi</li>
-                        <li>Tuyển dụng</li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
                     </ul>
                 </nav>
                 <button id="toggle"><span></span></button>
@@ -107,29 +107,18 @@
 
             <footer id="footer">
                 <div class="inner">
-                    <div id="footer-menu" class="nav">
-                        <ul>
-                            <li>Tuyển dụng</li>
-                            <li>Hồ sơ công ty</li>
-                            <li>Liên hệ chúng tôi</li>
-                            <li>Điều khoản sử dụng</li>
-                            <li>Chính sách bảo mật</li>
+                    <nav id="footer-menu" class="nav">
+                        <ul class="nav-menu">
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Hồ sơ công ty</a></li>
+                            <li><a href="#">Liên hệ chúng tôi</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
                         </ul>
-                    </div>
+                    </nav>
                     <div class="copyright">Copyright© 2020 Maichan Co.,Ltd. All Rights Reserved.</div>
                 </div>
             </footer>
         </div>
-        <script>
-            const header = document.querySelector('#header');
-            document.addEventListener('scroll', () => {
-                if( window.scrollY >= header.offsetHeight ) {
-                    header.classList.remove('sticky');
-                }
-                if( window.scrollY == 0 ){
-                    header.classList.add('sticky');
-                }
-            })
-        </script>
     </body>
 </html>

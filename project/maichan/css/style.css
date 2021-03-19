@@ -3,6 +3,7 @@
 ----------------------------------*/
 :root {
   --color-main: #e60012;
+  --color-main-hover: rgba(230, 0, 18, 0.70);
   --color-base: #111;
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -81,6 +82,9 @@ button,
 select {
   text-transform: none;
 }
+a {
+  text-decoration: none;
+}
 /*----------------------------------
     COMMON PARTS
 ----------------------------------*/
@@ -89,7 +93,6 @@ select {
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  margin-top: 90px;
 }
 .inner {
   width: 100%;
@@ -98,11 +101,14 @@ select {
   margin: 0 auto;
   padding: 0 10px;
 }
-nav.nav ul.nav-menu li {
-  display: inline-block;
+ul.nav-menu {
+  display: flex;
+}
+ul.nav-menu li {
+  display: block;
   margin-right: 20px;
 }
-nav.nav ul.nav-menu li:last-child {
+ul.nav-menu li:last-child {
   margin-right: 0;
 }
 /*----------------------------------
@@ -121,37 +127,56 @@ nav.nav ul.nav-menu li:last-child {
 #navigation {
   width: 100%;
   max-width: 1100px;
-  position: relative;
   margin: 0 auto;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all ease 1s;
 }
 #logo {
   width: 100px;
   height: auto;
-  transition: width ease 1s;
 }
 #main-menu {
   margin-left: auto;
-  /* transition: all ease 1s; */
 }
-
 #toggle {
   display: none;
+}
+/*----------------------------------
+    BODY MAIN
+----------------------------------*/
+#main {
+  padding: 64px 0;
 }
 /*----------------------------------
     FOOTER
 ----------------------------------*/
 #footer {
   background-color: var(--color-main);
+  color: #fff;
+}
+#footer-menu {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  border-bottom: 2px solid #fff;
+}
+#footer-menu a {
+  color: #fff;
+  font-weight: bold;
+}
+.copyright {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 /*----------------------------------
     FRONT PAGE
 ----------------------------------*/
-#header.sticky {
+#header.top-page {
   position: relative;
   height: 100vh;
   display: flex;
@@ -159,17 +184,45 @@ nav.nav ul.nav-menu li:last-child {
   background: url(../images/AdobeStock_206984735_Preview.jpeg) center center no-repeat;
   background-size: cover;
 }
-#header.sticky #navigation {
+#header.top-page #navigation {
   flex-direction: column;
   justify-content: flex-end;
 }
-#header.sticky #navigation #logo {
+#header.top-page #logo {
   width: 20vw;
   margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-#header.sticky #navigation #main-menu {
+#header.top-page #main-menu {
   margin: 0 auto 50px;
 }
-#header.sticky #navigation #main-menu li {
+#header.top-page #main-menu li {
   font-size: 20px;
+}
+#header.top-page #main-menu a {
+  text-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+#header.top-page #main-menu a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  position: relative;
+  padding: 20px;
+}
+#header.top-page #main-menu a::after {
+  content: '';
+  background-color: var(--color-main-hover);
+  height: 20px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transition: width ease 0.25s;
+}
+#header.top-page #main-menu a:hover::after {
+  width: 100%;
 }
