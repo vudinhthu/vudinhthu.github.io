@@ -2,6 +2,9 @@
     SMARTPHONE
 ----------------------------------*/
 @media screen and (max-width: 769px) {
+    .inner {
+        padding: 0 20px;
+    }
 }
 
 /*----------------------------------
@@ -14,6 +17,9 @@
     TABLET PRO SMALL
 ----------------------------------*/
 @media screen and (min-width: 769px) and (max-width: 834px) {
+    .inner {
+        padding: 0 20px;
+    }
 }
 
 /*----------------------------------
