@@ -9,7 +9,6 @@
         <meta name="keywords" content="Takoyaki,Đồ ăn nhanh, Maichan, Fast food">
         <meta name="robots" content="noindex">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/responsive.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,102 +20,177 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="#040000">
         <link rel="apple-touch-icon" href="favicon.png">
     </head>
-    <body class="front-page">
-        <header id="header" class="top-page">
+    <body>
+        <header id="header" class="header">
             <div id="navigation" class="navigation">
                 <div id="logo" class="logo">
                     <img src="./images/logo.png" alt="Tokoyaki Maichan">
                 </div>
-                <nav id="main-menu" class="nav">
-                    <ul class="nav-menu">
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Về chúng tôi</a></li>
-                        <li><a href="#">Tuyển dụng</a></li>
+                <nav class="nav header__menu">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#">Menu</a></li>
+                        <li class="menu__item"><a href="#">Tin tức</a></li>
+                        <li class="menu__item"><a href="#">Về chúng tôi</a></li>
+                        <li class="menu__item"><a href="#">Tuyển dụng</a></li>
                     </ul>
                 </nav>
                 <button id="toggle"><span></span></button>
             </div>
-            <div id="main-visual"></div>
         </header>
-        <div class="wrapper">
-            <main id="main" class="main contents">
-                <section class="content">
-                    <div class="inner">
-                        <div id="corona-notice" class="block block--content center">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">Nỗ lực và thông báo để ngăn ngừa nhiễm Corona virus mới</a>
-                            <div class=" block block--frame">
-                                <strong>Hãy ở nhà và thưởng thức Takoyaki! Các gói khuyến mãi đang được áp dụng. <br> Cùng nhau chung sức chống lại COVID 19.</strong>
-                            </div>
-                        </div>
-                        <div class="block block--banner">
-                            <div class="banner banner--half">
-                                <div class="banner--inner">
-                                    <a href="#">
-                                        <figure>
-                                            <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
-                                        </figure>
-                                        <figcaption>
-                                            Tiêu đề banner mẫu
-                                        </figcaption>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="banner banner--half">
-                                <div class="banner--inner">
-                                    <a href="#">
-                                        <figure>
-                                            <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
-                                        </figure>
-                                        <figcaption>
-                                            Tiêu đề banner mẫu
-                                        </figcaption>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="banner banner--half">
-                                <div class="banner--inner">
-                                    <a href="#">
-                                        <figure>
-                                            <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
-                                        </figure>
-                                        <figcaption>
-                                            Tiêu đề banner mẫu
-                                        </figcaption>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="banner banner--half">
-                                <div class="banner--inner">
-                                    <a href="#">
-                                        <figure>
-                                            <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
-                                        </figure>
-                                        <figcaption>
-                                            Tiêu đề banner mẫu
-                                        </figcaption>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
 
-            <footer id="footer">
-                <div class="inner">
-                    <nav id="footer-menu" class="nav">
-                        <ul class="nav-menu">
-                            <li><a href="#">Tuyển dụng</a></li>
-                            <li><a href="#">Hồ sơ công ty</a></li>
-                            <li><a href="#">Liên hệ chúng tôi</a></li>
-                            <li><a href="#">Điều khoản sử dụng</a></li>
-                            <li><a href="#">Chính sách bảo mật</a></li>
-                        </ul>
-                    </nav>
-                    <div class="copyright">Copyright© 2020 Maichan Co.,Ltd. All Rights Reserved.</div>
+        <section class="mv">
+            <img src="./images/AdobeStock_206984735_Preview.jpeg" alt="">
+        </section>
+
+        <main id="main" class="main">
+            <section class="content">
+                <div class="notice center">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">Nỗ lực và thông báo để ngăn ngừa nhiễm Corona virus mới</a>
+                    <div class="notice__frame">
+                        <strong>Hãy ở nhà và thưởng thức Takoyaki! Các gói khuyến mãi đang được áp dụng. <br> Cùng nhau chung sức chống lại COVID 19.</strong>
+                    </div>
                 </div>
-            </footer>
-        </div>
+            </section>
+            <section class="content">
+                <div class="banner">
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Tiêu đề banner mẫu</figcaption>
+                        </a>
+                    </div>
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Tiêu đề banner mẫu</figcaption>
+                        </a>
+                    </div>
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Tiêu đề banner mẫu</figcaption>
+                        </a>
+                    </div>
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_286782476_Preview.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Tiêu đề banner mẫu</figcaption>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="banner">
+                    <div class="banner__elem banner__elem--textover">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_364906120_Preview_Editorial_Use_Only.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>MOVIE</figcaption>
+                        </a>
+                    </div>
+                    <div class="banner__elem banner__elem--textover">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_364906120_Preview_Editorial_Use_Only.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>SMS</figcaption>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="banner banner--nowrap">
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_364906120_Preview_Editorial_Use_Only.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Giới thiệu</figcaption>
+                        </a>
+                    </div>
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_364906120_Preview_Editorial_Use_Only.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Thực đơn</figcaption>
+                        </a>
+                    </div>
+                    <div class="banner__elem">
+                        <a href="#">
+                            <figure>
+                                <img src="./images/AdobeStock_364906120_Preview_Editorial_Use_Only.jpeg" alt="Banner mẫu">
+                            </figure>
+                            <figcaption>Thẻ tem</figcaption>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <h2 class="hd center">LASTEST NEWS</h2>
+                <ul class="lasted-news">
+                    <li class="lasted-news__post">
+                        <a href="#">
+                            <time>2021.03.03</time>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu nunc suscipit, pulvinar enim commodo, eleifend elit. Phasellus dolor nunc, rutrum at suscipit vitae, aliquet a arcu.</h3>
+                        </a>
+                    </li>
+                    <li class="lasted-news__post">
+                        <a href="#">
+                            <time>2021.03.03</time>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu nunc suscipit, pulvinar enim commodo, eleifend elit. Phasellus dolor nunc, rutrum at suscipit vitae, aliquet a arcu.</h3>
+                        </a>
+                    </li>
+                    <li class="lasted-news__post">
+                        <a href="#">
+                            <time>2021.03.03</time>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu nunc suscipit, pulvinar enim commodo, eleifend elit. Phasellus dolor nunc, rutrum at suscipit vitae, aliquet a arcu.</h3>
+                        </a>
+                    </li>
+                    <li class="lasted-news__post">
+                        <a href="#">
+                            <time>2021.03.03</time>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu nunc suscipit, pulvinar enim commodo, eleifend elit. Phasellus dolor nunc, rutrum at suscipit vitae, aliquet a arcu.</h3>
+                        </a>
+                    </li>
+                    <li class="lasted-news__post">
+                        <a href="#">
+                            <time>2021.03.03</time>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu nunc suscipit, pulvinar enim commodo, eleifend elit. Phasellus dolor nunc, rutrum at suscipit vitae, aliquet a arcu.</h3>
+                        </a>
+                    </li>
+                    <div class="button-area">
+                        <a class="btn btn--primary btn--lg"  role="button">READ MORE</a>
+                    </div>
+                </ul>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer">
+            <div class="footer__inner">
+                <nav class="nav menu--footer">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#">Tuyển dụng</a></li>
+                        <li class="menu__item"><a href="#">Hồ sơ công ty</a></li>
+                        <li class="menu__item"><a href="#">Liên hệ chúng tôi</a></li>
+                        <li class="menu__item"><a href="#">Điều khoản sử dụng</a></li>
+                        <li class="menu__item"><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </nav>
+                <div class="copyright">Copyright© 2020 Maichan Co.,Ltd. All Rights Reserved.</div>
+            </div>
+        </footer>
     </body>
 </html>
