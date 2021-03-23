@@ -22,30 +22,27 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     </head>
     <body>
-        <header id="header" class="header">
-            <div id="navigation" class="navigation">
-                <div id="logo" class="logo">
-                    <a href="#">
-                        <img src="./images/logo.png" alt="Tokoyaki Maichan">
-                    </a>
-                </div>
-                <nav class="nav header__menu">
-                    <ul class="menu">
-                        <li class="menu__item"><a href="./menu/">Menu</a></li>
-                        <li class="menu__item"><a href="#">Tin tức</a></li>
-                        <li class="menu__item"><a href="#">Về chúng tôi</a></li>
-                        <li class="menu__item"><a href="#">Tuyển dụng</a></li>
-                    </ul>
-                </nav>
+
+        <nav class="navbar" role="navigation">
+            <div class="navbar__inner">
+                <a href="#" class="logo">
+                    <img src="./images/logo.png" alt="Tokoyaki Maichan">
+                </a>
+                <ul class="menu menu--header">
+                    <li class="menu__item"><a href="./menu/">Menu</a></li>
+                    <li class="menu__item"><a href="#">Tin tức</a></li>
+                    <li class="menu__item"><a href="#">Về chúng tôi</a></li>
+                    <li class="menu__item"><a href="#">Tuyển dụng</a></li>
+                </ul>
                 <button id="toggle"><span></span></button>
             </div>
-        </header>
+        </nav>
 
         <section class="mv">
             <img src="./images/AdobeStock_206984735_Preview.jpeg" alt="">
         </section>
 
-        <main id="main" class="main">
+        <main class="wrapper">
             <section class="content">
                 <div class="notice center">
                     <a href="http://" target="_blank" rel="noopener noreferrer">Nỗ lực và thông báo để ngăn ngừa nhiễm Corona virus mới</a>
@@ -195,5 +192,14 @@
                 <div class="copyright">Copyright© 2020 Maichan Co.,Ltd. All Rights Reserved.</div>
             </div>
         </footer>
+        <script>
+            let toggle = document.querySelector('#toggle');
+            let hmenu = document.querySelector('.menu--header');
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.target.classList.toggle('active');
+                hmenu.classList.toggle('active');
+            }, false);
+        </script>
     </body>
 </html>
