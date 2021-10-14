@@ -105,3 +105,6 @@ dist
 
 # Local history
 .history/
+
+# MacOS
+.DS_Store

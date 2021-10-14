@@ -1,0 +1,1 @@
+export default __webpack_public_path__ + "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot";
