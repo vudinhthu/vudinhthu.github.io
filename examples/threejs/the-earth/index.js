@@ -30,7 +30,7 @@ const material = new THREE.MeshPhongMaterial({
 	bumpScale: 0.04,
 })
 const earthMesh = new THREE.Mesh(geometry,material);
-scene.add(earthMesh);
+earthGroup.add(earthMesh);
 
 const lightsMat = new THREE.MeshBasicMaterial({
 	map: loader.load("./textures/03_earthlights1k.jpg"),

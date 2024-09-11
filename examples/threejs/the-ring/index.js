@@ -92,6 +92,21 @@ BackSide.forEach((c, i) => {
 circleGroup.position.y = geoH / 2;
 camera.position.set(0,5,18);
 
+function handleWindowResize() {
+    let _w = window.innerWidth;
+    let _h = window.innerHeight;
+    let aspect = _w / _h;
+    if( aspect < 1) {
+        camera.fov = 150;
+    }
+    camera.aspect = aspect;
+    camera.updateProjectionMatrix();
+    renderer.setSize(_w, _h);
+    renderer.setViewport(0,0,_w,_h);
+}
+const resizeObserver = new ResizeObserver(handleWindowResize);
+resizeObserver.observe(document.body);
+
 const animation = () => {
     time = clock.getElapsedTime() * 0.5 * Math.PI;
     circleGroup.rotation.y = time * speed;
