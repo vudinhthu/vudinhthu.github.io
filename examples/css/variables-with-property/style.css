@@ -1,0 +1,95 @@
+*,
+body {
+    font-family: 'Montserrat',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #02040F;
+    z-index: 0;
+}
+
+#box {
+    position: relative;
+    width: 20vw;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    background-color: rgb(2, 4, 15, 75%);
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-weight: 900;
+    font-size: 15vw;
+    letter-spacing:  0.1em;
+    pointer-events: none;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: perspective(500px) translate3d(-50%,-50%, 50px);
+    transform-origin: 0 0;
+}
+
+.text.border-blend-mode {
+    color: rgba(255,255,255,1);
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #f3f3f3;
+    mix-blend-mode: overlay;
+    transition-delay: .01s;
+}
+
+#box .text:not(.border-blend-mode) {
+    mix-blend-mode: overlay;
+}
+
+#box:hover .text {
+    transform: perspective(800px) translate3d(-50%,-50%, 100px);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+#box::before,
+#box::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3px;
+    border-radius: inherit;
+    --angle: 0deg;
+    background-color: #FF0000;
+    background-image: conic-gradient(from var(--angle), #BE0AFF, #0AFF99, #580AFF, #BE0AFF);
+    animation: autoRotate 2s linear infinite;
+    z-index: -1;
+    box-sizing: unset;
+}
+
+#box::after {
+    filter: blur(60px);
+}
+
+@keyframes autoRotate {
+    to {
+        --angle:360deg;
+    }
+}
