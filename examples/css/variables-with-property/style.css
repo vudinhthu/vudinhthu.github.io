@@ -17,6 +17,7 @@ body {
     align-items: center;
     background: #02040F;
     z-index: 0;
+    perspective: 400px;
 }
 
 #box {
@@ -27,36 +28,13 @@ body {
     background-color: rgb(2, 4, 15, 75%);
     text-transform: capitalize;
     color: #fff;
+    transform-style:preserve-3d;
+    transition: 1s ease-in-out;
+    perspective: 1000px;
 }
 
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    font-weight: 900;
-    font-size: 15vw;
-    letter-spacing:  0.1em;
-    pointer-events: none;
-    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transform: perspective(500px) translate3d(-50%,-50%, 50px);
-    transform-origin: 0 0;
-}
-
-.text.border-blend-mode {
-    color: rgba(255,255,255,1);
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: #f3f3f3;
-    mix-blend-mode: overlay;
-    transition-delay: .01s;
-}
-
-#box .text:not(.border-blend-mode) {
-    mix-blend-mode: overlay;
-}
-
-#box:hover .text {
-    transform: perspective(800px) translate3d(-50%,-50%, 100px);
+#box:hover {
+    transform: translateZ(-100px) rotateY(10deg);
 }
 
 @property --angle {
@@ -73,8 +51,7 @@ body {
     height: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 3px;
+    padding: 2%;
     border-radius: inherit;
     --angle: 0deg;
     background-color: #FF0000;
@@ -82,10 +59,53 @@ body {
     animation: autoRotate 2s linear infinite;
     z-index: -1;
     box-sizing: unset;
+    transform: translate3d(-50%, -50%, -10px);
 }
 
 #box::after {
     filter: blur(60px);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 900;
+    font-size: 15vw;
+    letter-spacing:  0;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    transform-origin: right center;
+    transition: all .5s linear;
+}
+
+.text.shadow {
+    color: #8a95a1;
+    filter: blur(40px);
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+    mix-blend-mode: color-burn;
+}
+
+.text.border {
+    color: #fff;
+    -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: #f3f3f3;
+    transition-delay: .01s;
+    z-index: 2;
+    mix-blend-mode: overlay;
+    transform: translate3d(-50%, -50%, 10px);
+}
+
+.text.front {
+    color: #12c77c;
+    mix-blend-mode: normal;
+    z-index: 3;
+    transform: translate3d(-50%, -50%, 20px);
+}
+
+#box:hover .text.front {
+    transform:  translate3d(-50%, -50%, 50px) rotateY(20deg);
 }
 
 @keyframes autoRotate {
